@@ -1,5 +1,6 @@
-// _Slices_ are an important data type in Go, giving
-// a more powerful interface to sequences than arrays.
+// _Slices_ (wycinki) to ważns struktura danych. Pozwala tworzyć
+// sekwencję podobnie do `array`, ale udostępnia znacznie lepszy
+// interface obsługi danych.
 
 package main
 
@@ -10,79 +11,82 @@ import (
 
 func main() {
 
-	// Unlike arrays, slices are typed only by the
-	// elements they contain (not the number of elements).
-	// An uninitialized slice equals to nil and has
-	// length 0.
+	// W przeciwieństwie do tablic wycinki są określona tylko
+	// typem przechowywanych wartości (bez ilości elementów).
+	// Niezainicjalizowane wycinek ma wartość nil
+	// i ilość elementów (długość) równą 0.
 	var s []string
 	fmt.Println("uninit:", s, s == nil, len(s) == 0)
 
-	// To create an empty slice with non-zero length, use
-	// the builtin `make`. Here we make a slice of
-	// `string`s of length `3` (initially zero-valued).
-	// By default a new slice's capacity is equal to its
-	// length; if we know the slice is going to grow ahead
-	// of time, it's possible to pass a capacity explicitly
-	// as an additional parameter to `make`.
+	// Żeby stworzyć pusty wycinek, o niezerowej długości
+	// używamy wbudowanej funkcji `make`. Poniżej tworzymy
+	// wycinek o długości 3 (wartość zerowa dla typu `string`
+	// to ""). Domyślnie pojemność wycinka jest równa jego
+	// długości. Jeśli zawczasu wiemy, że będziemy dodawali
+	// elementy do wycinka, możemy podać dodatkowy parametr
+	// pojemność do funkcji `make`.
 	s = make([]string, 3)
 	fmt.Println("emp:", s, "len:", len(s), "cap:", cap(s))
 
-	// We can set and get just like with arrays.
+	// Pobieranie i ustawianie wartości odbywa się tak samo,
+	// jak w przypadku tablic.
 	s[0] = "a"
 	s[1] = "b"
 	s[2] = "c"
 	fmt.Println("set:", s)
 	fmt.Println("get:", s[2])
 
-	// `len` returns the length of the slice as expected.
+	// Funkcja `len` zwraca ilość elementów.
 	fmt.Println("len:", len(s))
 
-	// In addition to these basic operations, slices
-	// support several more that make them richer than
-	// arrays. One is the builtin `append`, which
-	// returns a slice containing one or more new values.
-	// Note that we need to accept a return value from
-	// `append` as we may get a new slice value.
+	// Wycinki różnią się od tablic między innymi tym,
+	// że możemy dodawać do nich wartości (tablice mają
+	// stałą wielkość). Używamy do tego wbudowanej funkcji
+	// `append` która zwraca wycinek zawierający przekazany wycinek
+	// rozszerzony o pozostałe przekazane argumenty.
+	// Zwróćmy uwagę, że musimy użyć zwróconej przez `append`
+	// wartości, ponieważ może one zwrócić inny wycinek, niż
+	// przekazany (zazwyczaj dzieje się tak, jeśli pojemność przekazanego
+	// wycinka była zbyt mała).
 	s = append(s, "d")
 	s = append(s, "e", "f")
 	fmt.Println("apd:", s)
 
-	// Slices can also be `copy`'d. Here we create an
-	// empty slice `c` of the same length as `s` and copy
-	// into `c` from `s`.
+	// Wycinki mogą być również kopiowane przy użyciu wbudowanej
+	// funkcji `copy`. Tworzymy pusty wycinek i kopiujemy do
+	// niego zawartość wycinka `s`.
 	c := make([]string, len(s))
 	copy(c, s)
 	fmt.Println("cpy:", c)
 
-	// Slices support a "slice" operator with the syntax
-	// `slice[low:high]`. For example, this gets a slice
-	// of the elements `s[2]`, `s[3]`, and `s[4]`.
+	// Wycinki obsługują operator "slice" (części) o strukturze
+	// `wycinek[od:do]`. Na przykład, dla pobrania części
+	// składającej się z elementów `s[2]`, `s[3]` i `s[4]` użyjemy:
 	l := s[2:5]
 	fmt.Println("sl1:", l)
 
-	// This slices up to (but excluding) `s[5]`.
+	// To wycinek od początku do (ale wyłączając!) `s[5]`.
 	l = s[:5]
 	fmt.Println("sl2:", l)
 
-	// And this slices up from (and including) `s[2]`.
+	// Ten zaś od `s[2]` włącznie do ostatniego elementu wycinka.
 	l = s[2:]
 	fmt.Println("sl3:", l)
 
-	// We can declare and initialize a variable for slice
-	// in a single line as well.
+	// Możemy zadeklarować i wypełnić wycinek za jednym razem.
 	t := []string{"g", "h", "i"}
 	fmt.Println("dcl:", t)
 
-	// The `slices` package contains a number of useful
-	// utility functions for slices.
+	// Pakiet `slices` zawiera sporo funkcji
+	// pomocniczych, przydatnych przy pracy z wycinkami.
 	t2 := []string{"g", "h", "i"}
 	if slices.Equal(t, t2) {
 		fmt.Println("t == t2")
 	}
 
-	// Slices can be composed into multi-dimensional data
-	// structures. The length of the inner slices can
-	// vary, unlike with multi-dimensional arrays.
+	// Wycinki mogą być (jak tablice) łączone w wielowymiarowe
+	// struktury. Długość wewnętrznego wycinka może się zmieniać
+	// (w tablicach musi być stała).
 	twoD := make([][]int, 3)
 	for i := 0; i < 3; i++ {
 		innerLen := i + 1
