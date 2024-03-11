@@ -1,5 +1,5 @@
-// _Maps_ are Go's built-in [associative data type](https://en.wikipedia.org/wiki/Associative_array)
-// (sometimes called _hashes_ or _dicts_ in other languages).
+// _Maps_ to wbudowany [asocjacyjny typ danych](https://en.wikipedia.org/wiki/Associative_array)
+// (czasem nazywane _tablicą_mieszającą_ albo _słownikiem_ w innych językach).
 
 package main
 
