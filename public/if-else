@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: If/Else</title>
+    <title>Go w przykładach: If/Else</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script>
@@ -21,14 +21,15 @@
   </script>
   <body>
     <div class="example" id="if-else">
-      <h2><a href="./">Go by Example</a>: If/Else</h2>
+      <h2><a href="./">Go w przykładach</a>: If/Else</h2>
       
       <table>
         
         <tr>
           <td class="docs">
-            <p>Branching with <code>if</code> and <code>else</code> in Go is
-straight-forward.</p>
+            <p>Kod warunkowy przy wykorzystaniu <code>if</code> i <code>else</code> jest prosty
+i nie różni się od innych języków. Musisz jednak pamiętać,
+że warunek musi zwracać wartość typu bool.</p>
 
           </td>
           <td class="code empty leading">
@@ -42,7 +43,7 @@ straight-forward.</p>
             
           </td>
           <td class="code leading">
-            <a href="https://go.dev/play/p/U7xcpdutgCJ"><img title="Run code" src="play.png" class="run" /></a><img title="Copy code" src="clipboard.png" class="copy" />
+            <a href="https://go.dev/play/p/fn8RTQ4ZLZu"><img title="Run code" src="play.png" class="run" /></a><img title="Copy code" src="clipboard.png" class="copy" />
           <pre class="chroma"><code><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span></span></span></code></pre>
           </td>
         </tr>
@@ -69,7 +70,7 @@ straight-forward.</p>
         
         <tr>
           <td class="docs">
-            <p>Here&rsquo;s a basic example.</p>
+            <p>Najprostszy przykład.</p>
 
           </td>
           <td class="code leading">
@@ -84,7 +85,7 @@ straight-forward.</p>
         
         <tr>
           <td class="docs">
-            <p>You can have an <code>if</code> statement without an else.</p>
+            <p>Możesz użyć <code>if</code> bez <code>else</code>.</p>
 
           </td>
           <td class="code leading">
@@ -97,9 +98,9 @@ straight-forward.</p>
         
         <tr>
           <td class="docs">
-            <p>A statement can precede conditionals; any variables
-declared in this statement are available in the current
-and all subsequent branches.</p>
+            <p>Warunek możesz poprzedzić instrukcjami. Wszystkie zmienne
+w nich zadeklarowane będą dostępne zarówno w <code>if</code> jak i
+wszystkich kolejnych gałęziach.</p>
 
           </td>
           <td class="code leading">
@@ -117,8 +118,8 @@ and all subsequent branches.</p>
         
         <tr>
           <td class="docs">
-            <p>Note that you don&rsquo;t need parentheses around conditions
-in Go, but that the braces are required.</p>
+            <p>Nie musisz (nie powinieneś!) używać nawiasów wokół warunku,
+ale klamerki są zawsze wymagane.</p>
 
           </td>
           <td class="code empty">
@@ -146,9 +147,9 @@ in Go, but that the braces are required.</p>
         
         <tr>
           <td class="docs">
-            <p>There is no <a href="https://en.wikipedia.org/wiki/%3F:">ternary if</a>
-in Go, so you&rsquo;ll need to use a full <code>if</code> statement even
-for basic conditions.</p>
+            <p>W go nie występuje <a href="https://pl.wikipedia.org/wiki/Operator_warunkowy">operator warunkowy</a>.
+Będziesz musiał używać pełnej wersji if nawet dla
+prostych warunków.</p>
 
           </td>
           <td class="code empty">
@@ -161,12 +162,12 @@ for basic conditions.</p>
       
       
       <p class="next">
-        Next example: <a href="switch">Switch</a>.
+        Następny przykład: <a href="switch">Switch</a>.
       </p>
       
 
     <p class="footer">
-      by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> and <a href="https://eli.thegreenplace.net">Eli Bendersky</a> | <a href="https://github.com/mmcgrana/gobyexample">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+      napisali <a href="https://markmcgranaghan.com">Mark McGranaghan</a> i <a href="https://eli.thegreenplace.net">Eli Bendersky</a> (tłumaczenie <a href="https://kle.cz/ek">Marcin Kłeczek</a>) | <a href="https://github.com/mmcgrana/gobyexample">źródła</a> | <a href="https://github.com/mmcgrana/gobyexample#license">licencja</a>
     </p>
 
     </div>

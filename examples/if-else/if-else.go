@@ -1,5 +1,6 @@
-// Branching with `if` and `else` in Go is
-// straight-forward.
+// Kod warunkowy przy wykorzystaniu `if` i `else` jest prosty
+// i nie różni się od innych języków. Musisz jednak pamiętać,
+// że warunek musi zwracać wartość typu bool.
 
 package main
 
@@ -7,21 +8,21 @@ import "fmt"
 
 func main() {
 
-	// Here's a basic example.
+	// Najprostszy przykład.
 	if 7%2 == 0 {
 		fmt.Println("7 is even")
 	} else {
 		fmt.Println("7 is odd")
 	}
 
-	// You can have an `if` statement without an else.
+	// Możesz użyć `if` bez `else`.
 	if 8%4 == 0 {
 		fmt.Println("8 is divisible by 4")
 	}
 
-	// A statement can precede conditionals; any variables
-	// declared in this statement are available in the current
-	// and all subsequent branches.
+	// Warunek możesz poprzedzić instrukcjami. Wszystkie zmienne
+	// w nich zadeklarowane będą dostępne zarówno w `if` jak i
+	// wszystkich kolejnych gałęziach.
 	if num := 9; num < 0 {
 		fmt.Println(num, "is negative")
 	} else if num < 10 {
@@ -31,5 +32,5 @@ func main() {
 	}
 }
 
-// Note that you don't need parentheses around conditions
-// in Go, but that the braces are required.
+// Nie musisz (nie powinieneś!) używać nawiasów wokół warunku,
+// ale klamerki są zawsze wymagane.
