@@ -1,5 +1,5 @@
-// `for` is Go's only looping construct. Here are
-// some basic types of `for` loops.
+// `for` to jedyna konstrukcja pętli w Go. Poniżej są przykłady
+// zastosowania tejże pętli.
 
 package main
 
@@ -7,28 +7,28 @@ import "fmt"
 
 func main() {
 
-	// The most basic type, with a single condition.
+	// Pojedynczy warunek.
 	i := 1
 	for i <= 3 {
 		fmt.Println(i)
 		i = i + 1
 	}
 
-	// A classic initial/condition/after `for` loop.
+	// Klasyczna pętla `for`: ustawienie/warunek/wykonaj_po.
 	for j := 7; j <= 9; j++ {
 		fmt.Println(j)
 	}
 
-	// `for` without a condition will loop repeatedly
-	// until you `break` out of the loop or `return` from
-	// the enclosing function.
+	// `for` bez warunku będzie pętlą nieskończoną,
+	// dopóki nie przerwiesz jej `break` lub `return`
+	// które przerywa całą funkcję.
 	for {
 		fmt.Println("loop")
 		break
 	}
 
-	// You can also `continue` to the next iteration of
-	// the loop.
+	// Możesz również pominąć część instrukcji w pętli,
+	// używając `continue` przjdziesz do kolejnego wykonania pętli.
 	for n := 0; n <= 5; n++ {
 		if n%2 == 0 {
 			continue
