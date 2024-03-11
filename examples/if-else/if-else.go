@@ -20,6 +20,12 @@ func main() {
 		fmt.Println("8 is divisible by 4")
 	}
 
+	// Operatory logiczne `&&` (i) / `||` (lub) są często wykorzystywane
+	// w instrukcjach warunkowych.
+	if 8%2 == 0 || 7%2 == 0 {
+		fmt.Println("either 8 or 7 are even")
+	}
+
 	// Warunek możesz poprzedzić instrukcjami. Wszystkie zmienne
 	// w nich zadeklarowane będą dostępne zarówno w `if` jak i
 	// wszystkich kolejnych gałęziach.

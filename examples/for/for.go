@@ -15,8 +15,14 @@ func main() {
 	}
 
 	// Klasyczna pętla `for`: ustawienie/warunek/wykonaj_po.
-	for j := 7; j <= 9; j++ {
+	for j := 0; j <= 3; j++ {
 		fmt.Println(j)
+	}
+
+	// Inny sposób na osiągnięcie "zrób to N razy"
+	// to iteracja `range` przez liczby.
+	for i := range 3 {
+		fmt.Println("range", i)
 	}
 
 	// `for` bez warunku będzie pętlą nieskończoną,
@@ -29,7 +35,7 @@ func main() {
 
 	// Możesz również pominąć część instrukcji w pętli,
 	// używając `continue` przjdziesz do kolejnego wykonania pętli.
-	for n := 0; n <= 5; n++ {
+	for n := range 6 {
 		if n%2 == 0 {
 			continue
 		}
