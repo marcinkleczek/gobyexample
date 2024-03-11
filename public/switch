@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Switch</title>
+    <title>Go w przykładach: Switch</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script>
@@ -21,14 +21,14 @@
   </script>
   <body>
     <div class="example" id="switch">
-      <h2><a href="./">Go by Example</a>: Switch</h2>
+      <h2><a href="./">Go w przykładach</a>: Switch</h2>
       
       <table>
         
         <tr>
           <td class="docs">
-            <p><em>Switch statements</em> express conditionals across many
-branches.</p>
+            <p><code>switch</code> pozwala rozpatrywać wiele rozgałęzień jednego
+warunku.</p>
 
           </td>
           <td class="code empty leading">
@@ -42,7 +42,7 @@ branches.</p>
             
           </td>
           <td class="code leading">
-            <a href="https://go.dev/play/p/qVDqWoUQ6AI"><img title="Run code" src="play.png" class="run" /></a><img title="Copy code" src="clipboard.png" class="copy" />
+            <a href="https://go.dev/play/p/q96OFmWbbrW"><img title="Run code" src="play.png" class="run" /></a><img title="Copy code" src="clipboard.png" class="copy" />
           <pre class="chroma"><code><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span></span></span></code></pre>
           </td>
         </tr>
@@ -72,7 +72,7 @@ branches.</p>
         
         <tr>
           <td class="docs">
-            <p>Here&rsquo;s a basic <code>switch</code>.</p>
+            <p>Najprostszy <code>switch</code>.</p>
 
           </td>
           <td class="code leading">
@@ -92,9 +92,9 @@ branches.</p>
         
         <tr>
           <td class="docs">
-            <p>You can use commas to separate multiple expressions
-in the same <code>case</code> statement. We use the optional
-<code>default</code> case in this example as well.</p>
+            <p>Przy użyciu przecinków możesz rozdzielić kilka
+wyrażeń obsługiwanych przez jeden kod. Możesz użyć opcjonalnego
+przypadku <code>default</code> jeśli jest taka potrzeba.</p>
 
           </td>
           <td class="code leading">
@@ -110,9 +110,9 @@ in the same <code>case</code> statement. We use the optional
         
         <tr>
           <td class="docs">
-            <p><code>switch</code> without an expression is an alternate way
-to express if/else logic. Here we also show how the
-<code>case</code> expressions can be non-constants.</p>
+            <p><code>switch</code> bez wyrażenia może być użyte jako alternatywna metoda
+podobna logicznie do if/else. Wyrażenia <code>case</code>
+nie muszą być stałymi (jak w przykładzie)</p>
 
           </td>
           <td class="code leading">
@@ -129,10 +129,11 @@ to express if/else logic. Here we also show how the
         
         <tr>
           <td class="docs">
-            <p>A type <code>switch</code> compares types instead of values.  You
-can use this to discover the type of an interface
-value.  In this example, the variable <code>t</code> will have the
-type corresponding to its clause.</p>
+            <p>Poniższy <code>switch</code> porównuje typy zmiennej zamiast wartości.
+Użyj tego wzorca, żeby poprawnie zinterpretować wartości
+przesłane jako <code>interface{}</code>.
+W tym przykładzie zmienna <code>t</code> zawiera typ odpowiedni
+dla przekazanej do funkcji zmiennej.</p>
 
           </td>
           <td class="code">
@@ -178,12 +179,12 @@ type corresponding to its clause.</p>
       
       
       <p class="next">
-        Next example: <a href="arrays">Arrays</a>.
+        Następny przykład: <a href="arrays">Arrays</a>.
       </p>
       
 
     <p class="footer">
-      by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> and <a href="https://eli.thegreenplace.net">Eli Bendersky</a> | <a href="https://github.com/mmcgrana/gobyexample">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+      napisali <a href="https://markmcgranaghan.com">Mark McGranaghan</a> i <a href="https://eli.thegreenplace.net">Eli Bendersky</a> (tłumaczenie <a href="https://kle.cz/ek">Marcin Kłeczek</a>) | <a href="https://github.com/mmcgrana/gobyexample">źródła</a> | <a href="https://github.com/mmcgrana/gobyexample#license">licencja</a>
     </p>
 
     </div>

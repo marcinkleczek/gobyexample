@@ -1,5 +1,5 @@
-// _Switch statements_ express conditionals across many
-// branches.
+// `switch` pozwala rozpatrywać wiele rozgałęzień jednego
+// warunku.
 
 package main
 
@@ -10,7 +10,7 @@ import (
 
 func main() {
 
-	// Here's a basic `switch`.
+	// Najprostszy `switch`.
 	i := 2
 	fmt.Print("Write ", i, " as ")
 	switch i {
@@ -22,9 +22,9 @@ func main() {
 		fmt.Println("three")
 	}
 
-	// You can use commas to separate multiple expressions
-	// in the same `case` statement. We use the optional
-	// `default` case in this example as well.
+	// Przy użyciu przecinków możesz rozdzielić kilka
+	// wyrażeń obsługiwanych przez jeden kod. Możesz użyć opcjonalnego
+	// przypadku `default` jeśli jest taka potrzeba.
 	switch time.Now().Weekday() {
 	case time.Saturday, time.Sunday:
 		fmt.Println("It's the weekend")
@@ -32,9 +32,9 @@ func main() {
 		fmt.Println("It's a weekday")
 	}
 
-	// `switch` without an expression is an alternate way
-	// to express if/else logic. Here we also show how the
-	// `case` expressions can be non-constants.
+	// `switch` bez wyrażenia może być użyte jako alternatywna metoda
+	// podobna logicznie do if/else. Wyrażenia `case`
+	// nie muszą być stałymi (jak w przykładzie)
 	t := time.Now()
 	switch {
 	case t.Hour() < 12:
@@ -43,10 +43,11 @@ func main() {
 		fmt.Println("It's after noon")
 	}
 
-	// A type `switch` compares types instead of values.  You
-	// can use this to discover the type of an interface
-	// value.  In this example, the variable `t` will have the
-	// type corresponding to its clause.
+	// Poniższy `switch` porównuje typy zmiennej zamiast wartości.
+	// Użyj tego wzorca, żeby poprawnie zinterpretować wartości
+	// przesłane jako `interface{}`.
+	// W tym przykładzie zmienna `t` zawiera typ odpowiedni
+	// dla przekazanej do funkcji zmiennej.
 	whatAmI := func(i interface{}) {
 		switch t := i.(type) {
 		case bool:
