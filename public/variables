@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Variables</title>
+    <title>Go w przykładach: Variables</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script>
@@ -21,15 +21,15 @@
   </script>
   <body>
     <div class="example" id="variables">
-      <h2><a href="./">Go by Example</a>: Variables</h2>
+      <h2><a href="./">Go w przykładach</a>: Variables</h2>
       
       <table>
         
         <tr>
           <td class="docs">
-            <p>In Go, <em>variables</em> are explicitly declared and used by
-the compiler to e.g. check type-correctness of function
-calls.</p>
+            <p>W go <em>zmienne</em> są deklarowane wprost, a kompilator
+używa tych typów m.in. do sprawdzania poprawności wywołania
+funkcji.</p>
 
           </td>
           <td class="code empty leading">
@@ -43,7 +43,7 @@ calls.</p>
             
           </td>
           <td class="code leading">
-            <a href="https://go.dev/play/p/N5rWndIliJW"><img title="Run code" src="play.png" class="run" /></a><img title="Copy code" src="clipboard.png" class="copy" />
+            <a href="https://go.dev/play/p/dBWjdQbCKMW"><img title="Run code" src="play.png" class="run" /></a><img title="Copy code" src="clipboard.png" class="copy" />
           <pre class="chroma"><code><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span></span></span></code></pre>
           </td>
         </tr>
@@ -70,7 +70,7 @@ calls.</p>
         
         <tr>
           <td class="docs">
-            <p><code>var</code> declares 1 or more variables.</p>
+            <p><code>var</code> deklaruje jedną lub więcej zmiennych.</p>
 
           </td>
           <td class="code leading">
@@ -82,7 +82,7 @@ calls.</p>
         
         <tr>
           <td class="docs">
-            <p>You can declare multiple variables at once.</p>
+            <p>Możesz zadeklarować wiele zmiennych za jednym razem.</p>
 
           </td>
           <td class="code leading">
@@ -94,7 +94,7 @@ calls.</p>
         
         <tr>
           <td class="docs">
-            <p>Go will infer the type of initialized variables.</p>
+            <p>Go potrafi wywnioskować wyp zmiennej, jeśli nie jest podany.</p>
 
           </td>
           <td class="code leading">
@@ -106,9 +106,9 @@ calls.</p>
         
         <tr>
           <td class="docs">
-            <p>Variables declared without a corresponding
-initialization are <em>zero-valued</em>. For example, the
-zero value for an <code>int</code> is <code>0</code>.</p>
+            <p>Zmienne zadeklarowane bez przypisania wartości są ustawione na
+wartość zerową (specyficzną dla każdego typu). Dla przykładu:
+wartość zerowa dla typu <code>int</code> to <code>0</code>.</p>
 
           </td>
           <td class="code leading">
@@ -120,10 +120,10 @@ zero value for an <code>int</code> is <code>0</code>.</p>
         
         <tr>
           <td class="docs">
-            <p>The <code>:=</code> syntax is shorthand for declaring and
-initializing a variable, e.g. for
-<code>var f string = &quot;apple&quot;</code> in this case.
-This syntax is only available inside functions.</p>
+            <p>Skrót <code>:=</code> pozwala zadeklarować zmienną i
+przypisać do niej wartość. Jak tutaj na przykład
+<code>var f string = &quot;apple&quot;</code>.
+Można tak zrobić tylko wewnątrz funkcji.</p>
 
           </td>
           <td class="code">
@@ -157,12 +157,12 @@ This syntax is only available inside functions.</p>
       
       
       <p class="next">
-        Next example: <a href="constants">Constants</a>.
+        Następny przykład: <a href="constants">Constants</a>.
       </p>
       
 
     <p class="footer">
-      by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> and <a href="https://eli.thegreenplace.net">Eli Bendersky</a> | <a href="https://github.com/mmcgrana/gobyexample">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+      napisali <a href="https://markmcgranaghan.com">Mark McGranaghan</a> i <a href="https://eli.thegreenplace.net">Eli Bendersky</a> (tłumaczenie <a href="https://kle.cz/ek">Marcin Kłeczek</a>) | <a href="https://github.com/mmcgrana/gobyexample">źródła</a> | <a href="https://github.com/mmcgrana/gobyexample#license">licencja</a>
     </p>
 
     </div>

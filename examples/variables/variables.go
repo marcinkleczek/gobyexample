@@ -1,6 +1,6 @@
-// In Go, _variables_ are explicitly declared and used by
-// the compiler to e.g. check type-correctness of function
-// calls.
+// W go _zmienne_ są deklarowane wprost, a kompilator
+// używa tych typów m.in. do sprawdzania poprawności wywołania
+// funkcji.
 
 package main
 
@@ -8,28 +8,28 @@ import "fmt"
 
 func main() {
 
-	// `var` declares 1 or more variables.
+	// `var` deklaruje jedną lub więcej zmiennych.
 	var a = "initial"
 	fmt.Println(a)
 
-	// You can declare multiple variables at once.
+	// Możesz zadeklarować wiele zmiennych za jednym razem.
 	var b, c int = 1, 2
 	fmt.Println(b, c)
 
-	// Go will infer the type of initialized variables.
+	// Go potrafi wywnioskować wyp zmiennej, jeśli nie jest podany.
 	var d = true
 	fmt.Println(d)
 
-	// Variables declared without a corresponding
-	// initialization are _zero-valued_. For example, the
-	// zero value for an `int` is `0`.
+	// Zmienne zadeklarowane bez przypisania wartości są ustawione na
+	// wartość zerową (specyficzną dla każdego typu). Dla przykładu:
+	// wartość zerowa dla typu `int` to `0`.
 	var e int
 	fmt.Println(e)
 
-	// The `:=` syntax is shorthand for declaring and
-	// initializing a variable, e.g. for
-	// `var f string = "apple"` in this case.
-	// This syntax is only available inside functions.
+	// Skrót `:=` pozwala zadeklarować zmienną i
+	// przypisać do niej wartość. Jak tutaj na przykład
+	// `var f string = "apple"`.
+	// Można tak zrobić tylko wewnątrz funkcji.
 	f := "apple"
 	fmt.Println(f)
 }

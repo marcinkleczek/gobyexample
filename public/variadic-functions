@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Go by Example: Variadic Functions</title>
+    <title>Go w przykładach: Variadic Functions</title>
     <link rel=stylesheet href="site.css">
   </head>
   <script>
@@ -21,7 +21,7 @@
   </script>
   <body>
     <div class="example" id="variadic-functions">
-      <h2><a href="./">Go by Example</a>: Variadic Functions</h2>
+      <h2><a href="./">Go w przykładach</a>: Variadic Functions</h2>
       
       <table>
         
@@ -161,12 +161,12 @@ to form closures, which we&rsquo;ll look at next.</p>
       
       
       <p class="next">
-        Next example: <a href="closures">Closures</a>.
+        Następny przykład: <a href="closures">Closures</a>.
       </p>
       
 
     <p class="footer">
-      by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> and <a href="https://eli.thegreenplace.net">Eli Bendersky</a> | <a href="https://github.com/mmcgrana/gobyexample">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+      napisali <a href="https://markmcgranaghan.com">Mark McGranaghan</a> i <a href="https://eli.thegreenplace.net">Eli Bendersky</a> (tłumaczenie <a href="https://kle.cz/ek">Marcin Kłeczek</a>) | <a href="https://github.com/mmcgrana/gobyexample">źródła</a> | <a href="https://github.com/mmcgrana/gobyexample#license">licencja</a>
     </p>
 
     </div>
